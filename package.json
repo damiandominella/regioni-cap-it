@@ -4,8 +4,15 @@
   "description": "A service that returns all the CAPs (zip codes) given an italian region",
   "main": "index.js",
   "scripts": {
+    "serve": "nodemon index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "author": "Damian Dominella <damiandominella@gmail.com>",
   "license": "ISC",
@@ -14,6 +21,8 @@
     "fs-extra": "^9.0.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "supertest": "^5.0.0"
   }
 }

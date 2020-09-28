@@ -60,3 +60,18 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 ```json
 { "success": true, "cap": "47838", "region": "Emilia-Romagna" }
 ```
+
+## Develop
+
+To run the app locally:
+
+`npm install`
+`npm run start`
+
+To serve the app locally (live-reload):
+
+`npm run serve`
+
+## Tests
+
+`npm test`
