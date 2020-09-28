@@ -2,6 +2,8 @@
 
 A simple service that returns all the CAPs (zip codes) given a region name, or the region name given a CAP.
 
+Service available at: https://regioni-cap-it.herokuapp.com/
+
 Dataset credits: https://github.com/matteocontrini/comuni-json
 
 ## API
@@ -34,7 +36,7 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 
 #### Region2CAP
 
-`curl http://127.0.0.1:5000/region2cap\?region\="Basilicata"`
+`curl https://regioni-cap-it.herokuapp.com/region2cap?region="Basilicata"`
 
 ```json
 {
@@ -53,7 +55,7 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 
 #### CAP2Region
 
-`curl http://127.0.0.1:5000/cap2region\?cap\="47838"`
+`curl https://regioni-cap-it.herokuapp.com/cap2region?cap="47838"`
 
 ```json
 { "success": true, "cap": "47838", "region": "Emilia-Romagna" }
