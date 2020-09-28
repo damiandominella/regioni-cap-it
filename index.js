@@ -30,6 +30,7 @@ app.get("/region2cap", async (req, res) => {
     // Return the response
     return res.status(200).send({
       success: true,
+      region: region,
       count: output.length,
       data: output,
     });
@@ -64,7 +65,8 @@ app.get("/cap2region", async (req, res) => {
     // Return the response
     return res.status(200).send({
       success: true,
-      region: region[0],
+      cap: cap,
+      region: region[0] || null,
     });
   } catch (err) {
     console.error(err);
