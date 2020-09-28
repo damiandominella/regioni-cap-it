@@ -36,7 +36,7 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 
 #### Region2CAP
 
-`curl https://regioni-cap-it.herokuapp.com/region2cap?region="Basilicata"`
+`https://regioni-cap-it.herokuapp.com/region2cap?region=Basilicata`
 
 ```json
 {
@@ -55,7 +55,7 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 
 #### CAP2Region
 
-`curl https://regioni-cap-it.herokuapp.com/cap2region?cap="47838"`
+`https://regioni-cap-it.herokuapp.com/cap2region?cap=47838`
 
 ```json
 { "success": true, "cap": "47838", "region": "Emilia-Romagna" }
