@@ -4,6 +4,7 @@
   "description": "A service that returns all the CAPs (zip codes) given an italian region",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Damian Dominella <damiandominella@gmail.com>",
