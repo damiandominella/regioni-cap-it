@@ -1,42 +1,43 @@
 # Regioni - CAP - IT
 
-A simple service that returns all the CAPs (zip codes) given a region name, or the region name given a CAP.
+A simple REST API service that retrieves:
 
-Service available at: https://regioni-cap-it.herokuapp.com/
+- **the list of zip codes (CAP) of a given region name**
+- **the regione name given a zip code (CAP)**
 
-Dataset credits: https://github.com/matteocontrini/comuni-json
+Examples:
+`Marche` --> `61041`,`63095`,`63075`,`60020`,`63824`...
+`61041` --> `Marche`
 
-## API
+## Motivation
 
-#### Region2CAP
+Because in 2020 there's no Italian official service that gives you this simple information.
+I needed this service in order to display the region name for the registered users in an application, because during the registration of the address we only asked the CAP.
 
-##### Request
+## Tech/framework used
 
-`GET /region2cap?region=_REGION_`
+- Written in javascript and built with [Express](https://expressjs.com/]).
+- Dataset is a json (`data.json`) offered by [this guy](https://github.com/matteocontrini/comuni-json) and it is currently updated at `01/01/2020`
 
-##### Response
+## Features
 
-```json
-{ "success": true, "region": _REGION_, "count": 239, "data": [] }
-```
+- [x] Get all zip codes (CAP) of a region
+- [x] Get the region name of a zip code (CAP)
 
-#### CAP2Region
+## API Reference
 
-##### Request
+There are 2 available endpoints:
 
-`GET /cap2region?cap=_CAP_`
+- `GET /region2cap?region=_REGION_`
+- `GET /cap2region?cap=_CAP_`
 
-##### Response
+In each request you can pass the argument as query string parameter.
 
-```json
-{ "success": true, "cap": _CAP_, "region": "" }
-```
+#### Examples
 
-## Examples
+##### Region 2 CAP
 
-#### Region2CAP
-
-`https://regioni-cap-it.herokuapp.com/region2cap?region=Basilicata`
+`GET /region2cap?region=Basilicata`
 
 ```json
 {
@@ -53,25 +54,40 @@ Dataset credits: https://github.com/matteocontrini/comuni-json
 }
 ```
 
-#### CAP2Region
+##### CAP 2 Region
 
-`https://regioni-cap-it.herokuapp.com/cap2region?cap=47838`
+`GET /cap2region?cap=47838`
 
 ```json
-{ "success": true, "cap": "47838", "region": "Emilia-Romagna" }
+{ "success": true, "cap": "85010", "region": "Basilicata" }
 ```
 
-## Develop
+## Usage
 
-To run the app locally:
+Service is currently hosted on [Heroku](https://heroku.com) and available for free at [this url](https://regioni-cap-it.herokuapp.com/).
 
-`npm install`
-`npm run start`
+## Installation & Development
 
-To serve the app locally (live-reload):
+If you want to host the service yourself or try it locally, follow the next steps:
 
-`npm run serve`
+1. Clone the repository
+    `git clone git@github.com:damiandominella/regioni-cap-it.git`
 
-## Tests
+2. Navigate to the directory where you downloaded the project
+    `cd regioni-cap-it`
 
-`npm test`
+3. Install the dependencies
+   `npm install`
+
+4. Start the application
+   `npm run start`
+
+5. Navigate to http://127.0.0.1:3000
+
+### Tests
+
+Tests are written using [jest](https://jestjs.io/) and [supertest](https://github.com/visionmedia/supertest) and you can run them with: `npm test`
+
+## Credits
+
+Dataset credits: https://github.com/matteocontrini/comuni-json

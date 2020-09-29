@@ -75,7 +75,12 @@ server.get("/cap2region", async (req, res) => {
 
 // 404 - Error page
 server.use((req, res) => {
-  res.status(404).send({ error: "not-found" });
+  res
+    .status(404)
+    .send({
+      error: "not-found",
+      availableEndpoints: ["/region2cap", "/cap2region"],
+    });
 });
 
 module.exports = server;
