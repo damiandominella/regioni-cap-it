@@ -2,8 +2,8 @@
 
 A simple REST API service that retrieves:
 
-- **the list of zip codes (CAP) of a given region name**
-- **the regione name given a zip code (CAP)**
+- **the list of zip codes (CAP) of a given Italian region name**
+- **the region name given an Italian zip code (CAP)**
 
 Examples:
 
