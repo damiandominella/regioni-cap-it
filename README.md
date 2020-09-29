@@ -6,8 +6,9 @@ A simple REST API service that retrieves:
 - **the regione name given a zip code (CAP)**
 
 Examples:
-`Marche` --> `61041`,`63095`,`63075`,`60020`,`63824`...
-`61041` --> `Marche`
+
+- `Marche` --> `61041`,`63095`,`63075`,`60020`,`63824`...
+- `61041` --> `Marche`
 
 ## Motivation
 
