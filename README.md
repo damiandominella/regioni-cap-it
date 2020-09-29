@@ -65,7 +65,9 @@ In each request you can pass the argument as query string parameter.
 
 ## Usage
 
-Service is currently hosted on [Heroku](https://heroku.com) and available for free at [this url](https://regioni-cap-it.herokuapp.com/).
+Service is currently hosted on [Heroku](https://heroku.com) and available for free at [this url](https://regioni-cap-it.herokuapp.com/). 
+
+If you are willing to use this service, consider to make a little donation in order to keep the service up & running. You can do it by **sponsoring** this repository or [just clicking here](https://www.paypal.me/damiandominella). Thanks!
 
 ## Installation & Development
 
